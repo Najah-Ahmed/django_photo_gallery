@@ -5,6 +5,6 @@ from .views import addPhoto,showPhoto,detailsPhoto
 urlpatterns =[
   path('',showPhoto,name="gallery"),
   path('photo/<str:pk>',detailsPhoto,name="details"),
-  path('add',addPhoto,name="gallery"),
+  path('add',addPhoto,name="add"),
 
 ]

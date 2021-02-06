@@ -1,1 +1,37 @@
-<h3>Gallery </h3>
+{% extends './base.html'%}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-3">
+    <div class="card ">
+      <div class="card-header">
+        Categories
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">All</li>
+        <li class="list-group-item">Pets</li>
+        <li class="list-group-item">Nature</li>
+        <li class="list-group-item">Animal</li>
+
+        <a href="{%url 'add'%}" class='btn btn-block btn-dark stretched-link btn-sm m-1'>Add Photo</a>
+
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="card my-2" style="width: 18rem;">
+        <img
+          src="https://images.unsplash.com/photo-1511216113906-8f57bb83e776?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+          class="card-img-top" alt="..." style="height: 350px; ">
+        <div class="card-body">
+          <small class="card-text">Category:Animal
+          </small>
+        </div>
+        <a href="{% url 'details' 5 %}" class="btn btn-outline-dark btn-small m-1">View</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
