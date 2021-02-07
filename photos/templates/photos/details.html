@@ -4,14 +4,12 @@
 <div class="row jsutify-content-center">
   <div class="col">
     <a href="{% url 'gallery'%}" class="btn btn-dark my-3">Go Back</a>
+
     <div style="height: 90vh;">
-      <img
-        src=" https://images.unsplash.com/photo-1511216113906-8f57bb83e776?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-        class="rounded mx-auto d-block" alt="..." style="max-width: 90%; max-height: 90%;">
-      <p class=" text-start pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nisi, asperiores,
-        voluptate assumenda neque modi
-        eligendi fugit provident explicabo cum facilis aliquid nihil, quae hic obcaecati commodi soluta voluptates
-        nobis.</p>
+      <img src=" {{photo.image.url}}" class="rounded mx-auto d-block" alt="..."
+        style="max-width: 90%; max-height: 90%;">
+      <hr>
+      <p class=" text-start pl-2">{{photo.descpt}}</p>
     </div>
   </div>
 </div>
